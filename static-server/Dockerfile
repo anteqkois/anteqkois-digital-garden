@@ -13,3 +13,5 @@ COPY . .
 RUN npm run build
 
 CMD ["npm", "run", "start"]
+
+# TODO add stages to use builder and reduce final size
