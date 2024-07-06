@@ -34,6 +34,7 @@ export default {
     },
     footer: {
       createdWith: "Được tạo bởi",
+			createdBy: "",
     },
     graph: {
       title: "Biểu Đồ",
