@@ -1,20 +1,21 @@
-version: '3.8'
 services:
-  # NGINX Container to server another applications in sobfolder
-  digital-garden:
-    image: nginx:latest
+  web:
     container_name: digital-garden
-    restart: always
-    volumes:
-      - "./nginx/conf.d:/etc/nginx/conf.d"
-      - "./public:/usr/share/nginx/html"
-#    depends_on:
-#      - name_of_all_your_other_services
+    build:
+      context: ./static-server
+      dockerfile: ./static-server/Dockerfile
+    ports:
+      - 3030:3030
+    # env_file:
+    #   - .env
     environment:
-      # WebProxy - Settings
+      - VIRTUAL_PORT=3030
       - VIRTUAL_HOST=anteqkois.linkerry.com
       - LETSENCRYPT_HOST=anteqkois.linkerry.com
       - LETSENCRYPT_EMAIL=anteqkois@gmail.com
+    volumes:
+      - "./public:/app/static"
+    restart: unless-stopped
 
 networks:
   default:
