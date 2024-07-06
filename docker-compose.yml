@@ -1,23 +1,22 @@
 version: '3.8'
 services:
+  # NGINX Container to server another applications in sobfolder
   digital-garden:
+    image: nginx:latest
     container_name: digital-garden
-    build:
-      context: ./
-      dockerfile: ./Dockerfile
-    # image: registry.digitalocean.com/linkerry/web:latest
-    ports:
-      - 3030:3030
-    env_file:
-      - .env.prod
+    restart: always
+    volumes:
+      - "./nginx/conf.d:/etc/nginx/conf.d"
+      - "./public:/usr/share/nginx/html"
+#    depends_on:
+#      - name_of_all_your_other_services
     environment:
-      - VIRTUAL_HOST=3030
+      # WebProxy - Settings
+      - VIRTUAL_HOST=anteqkois.linkerry.com
       - LETSENCRYPT_HOST=anteqkois.linkerry.com
       - LETSENCRYPT_EMAIL=anteqkois@gmail.com
-      - VIRTUAL_PORT=3030
-    restart: unless-stopped
 
 networks:
   default:
     external:
-      name: ${NETWORK:-proxy}
+      name: webproxy
