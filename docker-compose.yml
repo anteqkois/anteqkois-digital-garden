@@ -7,14 +7,14 @@ services:
       dockerfile: ./Dockerfile
     # image: registry.digitalocean.com/linkerry/web:latest
     ports:
-      - ${VIRTUAL_PORT}:${VIRTUAL_PORT}
+      - 3030:3030
     env_file:
       - .env.prod
     environment:
-      - VIRTUAL_HOST=${VIRTUAL_HOST}
-      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - VIRTUAL_HOST=3030
+      - LETSENCRYPT_HOST=anteqkois.linkerry.com
       - LETSENCRYPT_EMAIL=anteqkois@gmail.com
-      - VIRTUAL_PORT=${VIRTUAL_PORT}
+      - VIRTUAL_PORT=3030
     restart: unless-stopped
 
 networks:
