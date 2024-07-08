@@ -1,12 +1,3 @@
----
-title: How to setup MongoDB replicaset 
-tags:
-  - dev
-  - databse
-  - mongodb
-  - replicaset
----
-
 # Commands to create local mongo replica set
 
 Run docker compose (first time, run with environments MONGO_INITDB_ROOT_PASSWORD etc to create admin. On the linux server they are not always properly readed for no reason.... After initializing mongo, remove environments from compose file)
@@ -59,6 +50,34 @@ rs.initiate(config);
 ## Add new node to existing replica set
 ```
 rs.add("mongodb2:27017")
+```
+
+## Check current config
+```
+rs.conf()
+```
+
+## Change replica set config by just assign new config (would be better the hosts to be DNS host then ip addresses)
+```
+use local;
+
+config = {
+      "_id" : "rs0",
+      "members" : [
+        {
+          "_id" : 0,
+          "host" : "<ip/host>:27017",
+					"priority" : 2
+        },
+        {
+          "_id" : 1,
+          "host" : "<ip/host>:27018",
+					"priority" : 1
+        },
+      ]
+      };
+
+rs.reconfig(config);
 ```
 
 ## How to connect:
