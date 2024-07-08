@@ -69,6 +69,8 @@ Enter when:
 Add to all of the strategies
 - `suplly-demand-zones` add to avoid fast trend revers
  
+
+## For now don't use dou too investing too much time in backtesting using PineScript
  
 #### Other settings
 ![alt text](image.png)
