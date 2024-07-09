@@ -6,6 +6,7 @@ tags:
   - websocket
   - auth
   - security
+  - passport
 ---
 
 In NestJS WebSocket you can protect logic in few ways:
@@ -47,7 +48,7 @@ In NestJS WebSocket you can protect logic in few ways:
   }
 ```
 
-`JwtCookiesWebsocketAuthGuard` logic
+`JwtCookiesWebsocketAuthGuard` logic with `passportJS`
 ```ts
 import { ExecutionContext, Injectable, UnauthorizedException } from '@nestjs/common'
 import { Reflector } from '@nestjs/core'
@@ -83,6 +84,37 @@ export class JwtCookiesWebsocketAuthGuard extends AuthGuard('jwt-websocket') {
 }
 ```
 
+`JwtCookiesWebsocketAuthGuard` logic plain
+```ts
+import { CanActivate, ExecutionContext, Injectable } from '@nestjs/common';
+import { Reflector } from '@nestjs/core';
+import { Observable } from 'rxjs';
+import { Socket } from 'socket.io';
+import { AuthService } from '../auth.service';
+import { MaxDataJwtToken } from '../types';
+
+@Injectable()
+export class JwtCookiesWebsocketAuthGuard implements CanActivate {
+	constructor(private reflector: Reflector) {}
+
+	static retriveAuthPayload(client: Socket): MaxDataJwtToken | null {
+		if (typeof client.handshake.headers.authorization !== 'string') return null;
+
+		// token can be stored in headers, cookies or predevined `auth` object in socket.io handshake object
+		const token = AuthService.retriveTokenFromBearer(client.handshake.headers.authorization);
+		if (!token) return null;
+
+		const jwtPayload = AuthService.decodeJwt(token);
+		return jwtPayload.sub ? jwtPayload : null;
+	}
+
+	canActivate(context: ExecutionContext): boolean | Promise<boolean> | Observable<boolean> {
+		const client = context.switchToWs().getClient<Socket>();
+		const userPayload = JwtCookiesWebsocketAuthGuard.retriveAuthPayload(client);
+		return !!userPayload;
+	}
+}
+```
 
 ## All together
 
