@@ -1,20 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0">
     <channel>
-      <title>🚀 Anoni&#039;s Kois Digital Garden</title>
+      <title>Improvement everyday 🚀</title>
       <link>https://anteqkois.linkerry.com</link>
-      <description>Last 10 notes on 🚀 Anoni&#039;s Kois Digital Garden</description>
+      <description>Last 10 notes on Improvement everyday 🚀</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Watch MySQL database changes</title>
+    <link>https://anteqkois.linkerry.com/programing/databases/mysql-watch-changes</link>
+    <guid>https://anteqkois.linkerry.com/programing/databases/mysql-watch-changes</guid>
+    <description>To watch for changes in MySQL database tables you can use my forked package zongji which use binary logs to retrive changes. Simple TypeScript usage const connectionConfig: mysql.PoolOptions = { port: process.env.PORT as unknown as number, host: process.env.HOST, user: process.env.USER, password: process.env.PASSWORD, database: process.env.DB_NAME, queueLimit: 0, enableKeepAlive: true, keepAliveInitialDelay: 0, connectionLimit: 5, } const altcoinWatcher = new ZongJi(connectionConfig) const handleChangeInAltcoinsStream() { return async (event: ZongJiEvent) =&gt; { // bussines logic } } altcoinWatcher.on(&#039;binlog&#039;, handleChangeInAltcoinsStream()).</description>
+    <pubDate>Tue, 09 Jul 2024 19:55:47 GMT</pubDate>
+  </item><item>
+    <title>Animate HTML element when content changes</title>
+    <link>https://anteqkois.linkerry.com/programing/ui/animation-when-element-changes</link>
+    <guid>https://anteqkois.linkerry.com/programing/ui/animation-when-element-changes</guid>
+    <description>The main ide is to animate table cell when the contane changes. Due to amount of cells i can’t use Custom Events. The sollution is to use Intersection Observer API to listen for childList change type and using changed element append css classes and listeners to remove after animation Example in VueJS (with Quasar library) &lt;template&gt; &lt;q-card&gt; &lt;q-table &lt;!-- ..</description>
+    <pubDate>Tue, 09 Jul 2024 16:32:53 GMT</pubDate>
+  </item><item>
+    <title>Auth for NestJS WebSocket connection</title>
+    <link>https://anteqkois.linkerry.com/programing/nest/websocket-auth</link>
+    <guid>https://anteqkois.linkerry.com/programing/nest/websocket-auth</guid>
+    <description>In NestJS WebSocket you can protect logic in few ways: Add ‘CORS’ to websocket @WebSocketGateway({ cors: { origin: [process.env[&#039;FRONTEND_HOST&#039;]], credentials: ...</description>
+    <pubDate>Tue, 09 Jul 2024 08:38:05 GMT</pubDate>
+  </item><item>
+    <title>Fresh restart docker compose with new env</title>
+    <link>https://anteqkois.linkerry.com/programing/docker/fresh-restart</link>
+    <guid>https://anteqkois.linkerry.com/programing/docker/fresh-restart</guid>
+    <description>When service runs and you want to restart it but with changed envirnment veriables just use docker compose up -d, it will discover that veriables were changed and will recreate container ...</description>
+    <pubDate>Mon, 08 Jul 2024 16:37:20 GMT</pubDate>
+  </item><item>
+    <title>MongoDb Replica Set</title>
+    <link>https://anteqkois.linkerry.com/programing/databases/mongodb-replicaset</link>
+    <guid>https://anteqkois.linkerry.com/programing/databases/mongodb-replicaset</guid>
+    <description>Commands to create local mongo replica set Run docker compose (first time, run with environments MONGO_INITDB_ROOT_PASSWORD etc to create admin. On the linux server they are not always properly readed for no reason… After initializing mongo, remove environments from compose file) docker compose up -d It problems with auth file access, check: Keyfile Access or use trick with entrypoint: entrypoint: - bash - -c - | chmod 400 /etc/mongo/authKey chown 999:999 /etc/mongo/authKey exec docker-entrypoint.sh &quot;$@&quot; Login as a admin docker exec -it mongodb mongo --host mongodb:27017 -u admin -p &lt;password&gt; --authenticationDatabase admin Setup replica set config (add secondary database) config = { &quot;_id&quot; : &quot;rs0&quot;, &quot;members&quot; : [ { &quot;_id&quot; : 0, &quot;host&quot; : &quot;mongodb:27017&quot;, &quot;priority&quot; : 2 }, { &quot;_id&quot; : 1, &quot;host&quot; : &quot;mongodb2:27017&quot;, &quot;priority&quot; : 1 }, ] }; Initialize cluster rs.initiate(config); Add new node to existing replica set rs.add(&quot;mongodb2:27017&quot;) Check current config rs.conf() Change replica set config by just assign new config (would be better the hosts to be DNS host then ip addresses) use local; config = { &quot;_id&quot; : &quot;rs0&quot;, &quot;members&quot; : [ { &quot;_id&quot; : 0, &quot;host&quot; : &quot;&lt;ip/host&gt;:27017&quot;, &quot;priority&quot; : 2 }, { &quot;_id&quot; : 1, &quot;host&quot; : &quot;&lt;ip/host&gt;:27018&quot;, &quot;priority&quot; : 1 }, ] }; rs.reconfig(config); How to connect: You must use directConnection=true connection option mongodb://order-book-alts:&lt;password&gt;@mongodb:27017/on_chain_data?replicaSet=rs0&amp;authSource=admin&amp;directConnection=true .</description>
+    <pubDate>Mon, 08 Jul 2024 15:27:58 GMT</pubDate>
+  </item><item>
+    <title>Rarely used nano commands</title>
+    <link>https://anteqkois.linkerry.com/programing/linux/nano</link>
+    <guid>https://anteqkois.linkerry.com/programing/linux/nano</guid>
+    <description>It’s a bit hard to remember, so here is commands whihc can be usefull for nano control + \ then control + y to go to the top of the file control + 6 mark/unmark control + k delete market content ...</description>
+    <pubDate>Mon, 08 Jul 2024 14:51:58 GMT</pubDate>
+  </item><item>
     <title>MySQL Binary Log</title>
-    <link>https://anteqkois.linkerry.com/dev/patterns/solve-issue-pattern/mysql-binary-log</link>
-    <guid>https://anteqkois.linkerry.com/dev/patterns/solve-issue-pattern/mysql-binary-log</guid>
+    <link>https://anteqkois.linkerry.com/programing/databases/mysql-binary-log</link>
+    <guid>https://anteqkois.linkerry.com/programing/databases/mysql-binary-log</guid>
     <description>MySQL Binary Log is often used to append watchers on the table changes. I used it to react on new insert on the separate service (it can be also achieved using event pattern) Storage One of drawback is storage.</description>
     <pubDate>Mon, 08 Jul 2024 13:09:20 GMT</pubDate>
   </item><item>
-    <title>Cancel pending axios request before making new to the same url</title>
-    <link>https://anteqkois.linkerry.com/dev/patterns/solve-issue-pattern/axios-cance</link>
-    <guid>https://anteqkois.linkerry.com/dev/patterns/solve-issue-pattern/axios-cance</guid>
+    <title>Cancel pending request</title>
+    <link>https://anteqkois.linkerry.com/programing/axios/cancel-pending-request</link>
+    <guid>https://anteqkois.linkerry.com/programing/axios/cancel-pending-request</guid>
     <description>VueJS Simple vueJS hook to handle request cancelation when new config was provided import axios, { AxiosRequestConfig, AxiosResponse } from &#039;axios&#039;; import { ref } from ...</description>
     <pubDate>Mon, 08 Jul 2024 10:15:32 GMT</pubDate>
   </item><item>
@@ -29,42 +65,6 @@
     <guid>https://anteqkois.linkerry.com/trading/ai-alghoritms/cnn</guid>
     <description>CNNs are excellent for image recognition tasks and can be trained to detect patterns in chart images. Github repository Create CNN with Python Advices and plan to create automated trading.</description>
     <pubDate>Sun, 07 Jul 2024 10:06:24 GMT</pubDate>
-  </item><item>
-    <title>Strategy which use Chandelier Exit</title>
-    <link>https://anteqkois.linkerry.com/trading/strategies/chandelier-exit</link>
-    <guid>https://anteqkois.linkerry.com/trading/strategies/chandelier-exit</guid>
-    <description>This indicator connections (adding ema-trend-meter) can imporve the signals. ema-trend-meter they should be all in the same colors for 2 timeframe and signal from the chandelier-exit should apper, then enter the posioton.</description>
-    <pubDate>Sun, 07 Jul 2024 09:09:16 GMT</pubDate>
-  </item><item>
-    <title>Use of PineScript from TradingView</title>
-    <link>https://anteqkois.linkerry.com/trading/pine-script/introduction</link>
-    <guid>https://anteqkois.linkerry.com/trading/pine-script/introduction</guid>
-    <description>Great fast YT tutorial create plots, strategies, backtesitng Alternatives This articel include alternatives to PineScript.</description>
-    <pubDate>Sun, 07 Jul 2024 09:01:45 GMT</pubDate>
-  </item><item>
-    <title>Strategy which use AI indicator and zones</title>
-    <link>https://anteqkois.linkerry.com/trading/strategies/ai-and-supply-demand-zones</link>
-    <guid>https://anteqkois.linkerry.com/trading/strategies/ai-and-supply-demand-zones</guid>
-    <description> Add supply and demand zones on the chart. Use indicator for it and also add myself using simple lines .</description>
-    <pubDate>Sun, 07 Jul 2024 06:24:47 GMT</pubDate>
-  </item><item>
-    <title>Tool for me as a developer</title>
-    <link>https://anteqkois.linkerry.com/trading/tools/dev</link>
-    <guid>https://anteqkois.linkerry.com/trading/tools/dev</guid>
-    <description>Here is a list of dev tools which can i use to develop tools which help me during trading. JavaScript library for indicators Python library to idnetify chart pattern.</description>
-    <pubDate>Sun, 07 Jul 2024 06:12:43 GMT</pubDate>
-  </item><item>
-    <title>Tool to use for trading</title>
-    <link>https://anteqkois.linkerry.com/trading/tools/</link>
-    <guid>https://anteqkois.linkerry.com/trading/tools/</guid>
-    <description>The rest of your content lives here. You can use Markdown here :) text.</description>
-    <pubDate>Sun, 07 Jul 2024 06:03:42 GMT</pubDate>
-  </item><item>
-    <title>Welcome to Antoni&#039;s Kois digital garden !</title>
-    <link>https://anteqkois.linkerry.com/</link>
-    <guid>https://anteqkois.linkerry.com/</guid>
-    <description>For now, the start page is empty 🫣.</description>
-    <pubDate>Sat, 06 Jul 2024 16:09:24 GMT</pubDate>
   </item>
     </channel>
   </rss>

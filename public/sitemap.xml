@@ -1,12 +1,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
-    <loc>https://anteqkois.linkerry.com/dev/patterns/solve-issue-pattern/axios-cance</loc>
-    <lastmod>2024-07-08T10:15:32.998Z</lastmod>
-  </url><url>
-    <loc>https://anteqkois.linkerry.com/dev/patterns/solve-issue-pattern/mysql-binary-log</loc>
-    <lastmod>2024-07-08T13:09:20.504Z</lastmod>
-  </url><url>
     <loc>https://anteqkois.linkerry.com/</loc>
     <lastmod>2024-07-06T16:09:24.223Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/databases/mongodb-replicaset</loc>
+    <lastmod>2024-07-08T15:27:58.308Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/databases/mysql-binary-log</loc>
+    <lastmod>2024-07-08T13:09:20.504Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/docker/fresh-restart</loc>
+    <lastmod>2024-07-08T16:37:20.589Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/nest/websocket-auth</loc>
+    <lastmod>2024-07-09T08:38:05.736Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/ui/animation-when-element-changes</loc>
+    <lastmod>2024-07-09T16:32:53.528Z</lastmod>
   </url><url>
     <loc>https://anteqkois.linkerry.com/trading/ai-alghoritms/cnn</loc>
     <lastmod>2024-07-07T10:06:24.375Z</lastmod>
@@ -28,4 +37,13 @@
   </url><url>
     <loc>https://anteqkois.linkerry.com/trading/tools/</loc>
     <lastmod>2024-07-07T06:03:42.987Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/axios/cancel-pending-request</loc>
+    <lastmod>2024-07-08T10:15:32.998Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/databases/mysql-watch-changes</loc>
+    <lastmod>2024-07-09T19:55:47.314Z</lastmod>
+  </url><url>
+    <loc>https://anteqkois.linkerry.com/programing/linux/nano</loc>
+    <lastmod>2024-07-08T14:51:58.807Z</lastmod>
   </url></urlset>
