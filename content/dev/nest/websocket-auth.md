@@ -2,11 +2,11 @@
 title: Auth for NestJS WebSocket connection
 tags:
   - dev
-  - nest
+  - nestjs
   - websocket
   - auth
   - security
-  - passport
+  - passportjs
 ---
 
 In NestJS WebSocket you can protect logic in few ways:
