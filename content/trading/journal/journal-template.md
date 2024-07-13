@@ -6,6 +6,7 @@ tags:
 date: 2024-07-12
 ---
  
+# Trade summary
 ### Why Enter, was a good choise ?
 	
 ### Why this position size, was a good choise ?
