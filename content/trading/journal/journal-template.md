@@ -1,20 +1,25 @@
 ---
-title: Trading Jounar key-points
+title: <SYMBOL> <LONG/SHORT>
 tags:
   - trading
   - journal
+date: 2024-07-12
 ---
  
-- How do you fell today ? Which emotions ?
-- Document every trade
-  - Why I enter the trade ?
-  - Why this posiotion size ?
-  - Whye SL and TP at this levels ?
-  - Do I follow trading, strategy rules ?
-  - It was good trade /  bad trade ?
-- Market conditions
-  - Is it trending or consolidation
-  - Is it waiting for economic news or any news like ETF etc.
-  - Is there any others important macroeconomy conditions ? War etc. ?
-- What I do bad/good today ?
-- Money isn't a good set of gool, beter is winning ratio etc. 
+### Why Enter, was a good choise ?
+	
+### Why this position size, was a good choise ?
+
+### Why SL, TP on this levels, was a good choise ?
+
+### Did I follow trading rules ?
+
+### Was is a good / bad trade ?
+
+# Day suurond
+
+### Today feelings
+
+### Long-term trend
+
+### Special economic news, announcements, macroeconomy conditions

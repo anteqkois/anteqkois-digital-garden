@@ -6,6 +6,48 @@
       <description>Last 10 notes on Improvement everyday 🚀</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>Trading mindset</title>
+    <link>https://anteqkois.linkerry.com/trading/journal/mindset</link>
+    <guid>https://anteqkois.linkerry.com/trading/journal/mindset</guid>
+    <description> Money isn’t a good set of gool, better is winning ratio etc. No position is also a having position, you don’t need be in trade all time.</description>
+    <pubDate>Sat, 13 Jul 2024 09:10:43 GMT</pubDate>
+  </item><item>
+    <title>Trading Jounar key-points</title>
+    <link>https://anteqkois.linkerry.com/trading/journal/journal-key-points</link>
+    <guid>https://anteqkois.linkerry.com/trading/journal/journal-key-points</guid>
+    <description>...</description>
+    <pubDate>Sat, 13 Jul 2024 08:59:28 GMT</pubDate>
+  </item><item>
+    <title>&lt;SYMBOL&gt; &lt;LONG/SHORT&gt;</title>
+    <link>https://anteqkois.linkerry.com/trading/journal/journal-template</link>
+    <guid>https://anteqkois.linkerry.com/trading/journal/journal-template</guid>
+    <description>Why Enter, was a good choise ? Why this position size, was a good choise ? Why SL, TP on this levels, was a good choise ? Did I follow trading rules ? Was is a good / bad trade ? Day suurond Today ...</description>
+    <pubDate>Fri, 12 Jul 2024 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Change SSH disconnect idle settings</title>
+    <link>https://anteqkois.linkerry.com/programing/linux/ssh-change-disconnect</link>
+    <guid>https://anteqkois.linkerry.com/programing/linux/ssh-change-disconnect</guid>
+    <description>On Linux or MacOS Edit ssh config nano ~/.ssh/config or add when not exists. Add following config properties Host * ServerAliveInterval 60 ServerAliveCountMax 8 ServerAliveInterval - Will send a keepalive message to server every x seconds to stay connected to it ServerAliveCountMax - How many missing responses form server can be before quiet connection.</description>
+    <pubDate>Thu, 11 Jul 2024 10:39:28 GMT</pubDate>
+  </item><item>
+    <title>AI Prompts to simplyfy my daily tasks</title>
+    <link>https://anteqkois.linkerry.com/media/ai-prompts</link>
+    <guid>https://anteqkois.linkerry.com/media/ai-prompts</guid>
+    <description>Post for linkedin Your task is to create a simple post for LinkedIn from the provided markdown content. It should be catchy, interesting, easy to understand, and at the beginning, start with a brief introduction.</description>
+    <pubDate>Wed, 10 Jul 2024 19:52:29 GMT</pubDate>
+  </item><item>
+    <title>Storj</title>
+    <link>https://anteqkois.linkerry.com/investing/cryptocurrency/storj</link>
+    <guid>https://anteqkois.linkerry.com/investing/cryptocurrency/storj</guid>
+    <description>Check this project before bullrun and to invest HODL Official webpage.</description>
+    <pubDate>Wed, 10 Jul 2024 16:58:43 GMT</pubDate>
+  </item><item>
+    <title>MedusaJS</title>
+    <link>https://anteqkois.linkerry.com/programing/tools/medusajs</link>
+    <guid>https://anteqkois.linkerry.com/programing/tools/medusajs</guid>
+    <description>A commerce platform with a built-in framework for customizations MedusaJS.</description>
+    <pubDate>Wed, 10 Jul 2024 05:46:37 GMT</pubDate>
+  </item><item>
     <title>Watch MySQL database changes</title>
     <link>https://anteqkois.linkerry.com/programing/databases/mysql-watch-changes</link>
     <guid>https://anteqkois.linkerry.com/programing/databases/mysql-watch-changes</guid>
@@ -23,48 +65,6 @@
     <guid>https://anteqkois.linkerry.com/programing/nest/websocket-auth</guid>
     <description>In NestJS WebSocket you can protect logic in few ways: Add ‘CORS’ to websocket @WebSocketGateway({ cors: { origin: [process.env[&#039;FRONTEND_HOST&#039;]], credentials: ...</description>
     <pubDate>Tue, 09 Jul 2024 08:38:05 GMT</pubDate>
-  </item><item>
-    <title>Fresh restart docker compose with new env</title>
-    <link>https://anteqkois.linkerry.com/programing/docker/fresh-restart</link>
-    <guid>https://anteqkois.linkerry.com/programing/docker/fresh-restart</guid>
-    <description>When service runs and you want to restart it but with changed envirnment veriables just use docker compose up -d, it will discover that veriables were changed and will recreate container ...</description>
-    <pubDate>Mon, 08 Jul 2024 16:37:20 GMT</pubDate>
-  </item><item>
-    <title>MongoDb Replica Set</title>
-    <link>https://anteqkois.linkerry.com/programing/databases/mongodb-replicaset</link>
-    <guid>https://anteqkois.linkerry.com/programing/databases/mongodb-replicaset</guid>
-    <description>Commands to create local mongo replica set Run docker compose (first time, run with environments MONGO_INITDB_ROOT_PASSWORD etc to create admin. On the linux server they are not always properly readed for no reason… After initializing mongo, remove environments from compose file) docker compose up -d It problems with auth file access, check: Keyfile Access or use trick with entrypoint: entrypoint: - bash - -c - | chmod 400 /etc/mongo/authKey chown 999:999 /etc/mongo/authKey exec docker-entrypoint.sh &quot;$@&quot; Login as a admin docker exec -it mongodb mongo --host mongodb:27017 -u admin -p &lt;password&gt; --authenticationDatabase admin Setup replica set config (add secondary database) config = { &quot;_id&quot; : &quot;rs0&quot;, &quot;members&quot; : [ { &quot;_id&quot; : 0, &quot;host&quot; : &quot;mongodb:27017&quot;, &quot;priority&quot; : 2 }, { &quot;_id&quot; : 1, &quot;host&quot; : &quot;mongodb2:27017&quot;, &quot;priority&quot; : 1 }, ] }; Initialize cluster rs.initiate(config); Add new node to existing replica set rs.add(&quot;mongodb2:27017&quot;) Check current config rs.conf() Change replica set config by just assign new config (would be better the hosts to be DNS host then ip addresses) use local; config = { &quot;_id&quot; : &quot;rs0&quot;, &quot;members&quot; : [ { &quot;_id&quot; : 0, &quot;host&quot; : &quot;&lt;ip/host&gt;:27017&quot;, &quot;priority&quot; : 2 }, { &quot;_id&quot; : 1, &quot;host&quot; : &quot;&lt;ip/host&gt;:27018&quot;, &quot;priority&quot; : 1 }, ] }; rs.reconfig(config); How to connect: You must use directConnection=true connection option mongodb://order-book-alts:&lt;password&gt;@mongodb:27017/on_chain_data?replicaSet=rs0&amp;authSource=admin&amp;directConnection=true .</description>
-    <pubDate>Mon, 08 Jul 2024 15:27:58 GMT</pubDate>
-  </item><item>
-    <title>Rarely used nano commands</title>
-    <link>https://anteqkois.linkerry.com/programing/linux/nano</link>
-    <guid>https://anteqkois.linkerry.com/programing/linux/nano</guid>
-    <description>It’s a bit hard to remember, so here is commands whihc can be usefull for nano control + \ then control + y to go to the top of the file control + 6 mark/unmark control + k delete market content ...</description>
-    <pubDate>Mon, 08 Jul 2024 14:51:58 GMT</pubDate>
-  </item><item>
-    <title>MySQL Binary Log</title>
-    <link>https://anteqkois.linkerry.com/programing/databases/mysql-binary-log</link>
-    <guid>https://anteqkois.linkerry.com/programing/databases/mysql-binary-log</guid>
-    <description>MySQL Binary Log is often used to append watchers on the table changes. I used it to react on new insert on the separate service (it can be also achieved using event pattern) Storage One of drawback is storage.</description>
-    <pubDate>Mon, 08 Jul 2024 13:09:20 GMT</pubDate>
-  </item><item>
-    <title>Cancel pending request</title>
-    <link>https://anteqkois.linkerry.com/programing/axios/cancel-pending-request</link>
-    <guid>https://anteqkois.linkerry.com/programing/axios/cancel-pending-request</guid>
-    <description>VueJS Simple vueJS hook to handle request cancelation when new config was provided import axios, { AxiosRequestConfig, AxiosResponse } from &#039;axios&#039;; import { ref } from ...</description>
-    <pubDate>Mon, 08 Jul 2024 10:15:32 GMT</pubDate>
-  </item><item>
-    <title>Random notes related to PineScript</title>
-    <link>https://anteqkois.linkerry.com/trading/pine-script/notes</link>
-    <guid>https://anteqkois.linkerry.com/trading/pine-script/notes</guid>
-    <description>var keyword use var keyword to define veriable accessed in all bars. Access previus data use index to access previous data, for example close[1] to get previous close.</description>
-    <pubDate>Sun, 07 Jul 2024 13:54:26 GMT</pubDate>
-  </item><item>
-    <title>CNNs are excellent for image recognition tasks and can be trained to detect patterns in chart images.</title>
-    <link>https://anteqkois.linkerry.com/trading/ai-alghoritms/cnn</link>
-    <guid>https://anteqkois.linkerry.com/trading/ai-alghoritms/cnn</guid>
-    <description>CNNs are excellent for image recognition tasks and can be trained to detect patterns in chart images. Github repository Create CNN with Python Advices and plan to create automated trading.</description>
-    <pubDate>Sun, 07 Jul 2024 10:06:24 GMT</pubDate>
   </item>
     </channel>
   </rss>
