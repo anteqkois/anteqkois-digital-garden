@@ -5,6 +5,7 @@ tags:
   - best-practise
   - patterns
   - spr
+  - solid
 ---
 
 # SPR - Single Responsibility Principle
