@@ -4,6 +4,7 @@ tags:
   - smart-money-concept
   - smc
 ---
+
 ![[Pasted image 20240818221256.png]]
 ![[Pasted image 20240818221425.png]]
 Ciekway post na redit:

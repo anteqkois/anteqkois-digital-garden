@@ -38,12 +38,12 @@ plot(10, 'EMA2', color = Bull2 ? color.green : color.red, linewidth=4, style=plo
 plot(0, 'EMA3', color = Bull3 ? color.green : color.red, linewidth=4, style=plot.style_circles)
 ```
 
-![alt text](image-1.png)
+![alt text](trading/strategies/image-1.png)
 
 
 
 ## strategies
-![alt text](image-2.png)
+![alt text](trading/strategies/image-2.png)
 
 #### One
 Enter when:
@@ -73,4 +73,4 @@ Add to all of the strategies
 ## For now don't use dou too investing too much time in backtesting using PineScript
  
 #### Other settings
-![alt text](image.png)
+![alt text](trading/strategies/image.png)
